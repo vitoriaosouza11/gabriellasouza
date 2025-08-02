@@ -161,3 +161,16 @@ body {
   }
 }
 
+.imagem {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.imagem img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
