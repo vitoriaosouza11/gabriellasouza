@@ -174,3 +174,13 @@ body {
   object-fit: cover;
 }
 
+.btn-personalizado {
+  background-color: #696969;
+  border-color:#ee75e6;
+  color:aliceblue
+}
+
+.btn-personalizado:hover {
+  background-color: #e067e4;
+  border-color: #e35ac5;
+}
