@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Contato - Gabriella Souza</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
   <link rel="stylesheet" href="/estilo.css">
@@ -12,7 +12,8 @@
 
 <body>
 
-  <nav class="navbar navbar-expand-lg ">
+  
+  <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Gabriella Souza</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -21,13 +22,9 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Início</a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">Procedimentos</a>
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Procedimentos</a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="facial.html">Facial</a></li>
               <li><a class="dropdown-item" href="corporal.html">Corporal</a></li>
@@ -35,17 +32,46 @@
               <li><a class="dropdown-item" href="luzpulsada.html">Luz Pulsada</a></li>
             </ul>
           </li>
-          
-          <li class="nav-item">
-            <a class="nav-link" href="sobre.html">Sobre</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contato.html">Contato</a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contato.html">Contato</a></li>
         </ul>
       </div>
     </div>
   </nav>
+
+  <br>
+
+ 
+  <h2 style="text-align: center; color: #bb8a50;">FALE CONOSCO</h2>
+
+  
+  <div class="container mt-5 mb-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <form>
+          <div class="mb-3">
+            <label for="nome" class="form-label">Nome completo</label>
+            <input type="text" class="form-control" id="nome" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">E-mail</label>
+            <input type="email" class="form-control" id="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="telefone" class="form-label">Telefone</label>
+            <input type="tel" class="form-control" id="telefone">
+          </div>
+          <div class="mb-3">
+            <label for="mensagem" class="form-label">Mensagem</label>
+            <textarea class="form-control" id="mensagem" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn" style="background-color: #bb8a50; color: white;">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  
   <div vw class="enabled">
     <div vw-access-button class="active"></div>
     <div vw-plugin-wrapper>
@@ -53,13 +79,10 @@
     </div>
   </div>
 
-
-
-
+ 
   <div class="container_wrap footer_color" id="footer">
     <section>
       <div class="footer-container">
-
 
         <div class="footer-column">
           <h4 style="margin-top: 30px; color: white;">NAVEGUE PELO SITE</h4>
@@ -70,7 +93,6 @@
             <li><a href="contato.html">Contato</a></li>
           </ul>
         </div>
-
 
         <div class="footer-column">
           <h4 style="margin-top: 30px; color: white;">ENDEREÇO</h4>
@@ -88,7 +110,6 @@
           </p>
         </div>
 
-
         <div class="footer-column">
           <h4 style="margin-top: 30px; color: white;">ENTRE EM CONTATO</h4>
           <p>📱 (19) 99334-4430</p>
@@ -96,27 +117,25 @@
 
           <h4 style="margin-top: 30px; color: white;">SIGA NOSSAS REDES!</h4>
           <div class="footer-social-icons">
-            <a href="#"><img src="https://www.diazer.com.br/wp-content/uploads/2020/05/icone-instagram-white.png"
-                alt="Instagram"></a>
-            <a href="#"><img src="https://www.diazer.com.br/wp-content/uploads/2025/02/icone-tiktok-white.png"
-                alt="TikTok"></a>
+            <a href="https://www.instagram.com/gabriellasouza.oficial?igsh=bnpjcTl2dmN6eWtv&utm_source=qr"><img src="https://www.diazer.com.br/wp-content/uploads/2020/05/icone-instagram-white.png" alt="Instagram"></a>
+            <a href="https://www.tiktok.com/@gabriellasouzaoficial?_t=ZM-8yY0dSDHNkm&_r=1"><img src="https://www.diazer.com.br/wp-content/uploads/2025/02/icone-tiktok-white.png" alt="TikTok"></a>
           </div>
         </div>
-
 
         <div class="footer-logo">
           <img src="FOTOS/logo.jpg" style="width: 100px; height: 100px; border-radius: 50%;" alt="Logo">
           <p style="color: #bb8a50; margin-top: 10px;">ESTÉTICA AVANÇADA E INTEGRATIVA</p>
         </div>
+
       </div>
     </section>
   </div>
-
 
   <footer style="background-color: #333; color: white; text-align: center; padding: 20px;">
     &copy; GABRIELLA SOUZA. Todos os direitos reservados.
   </footer>
 
+  
   <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
   <script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');
