@@ -12,7 +12,7 @@
 
 <body>
 
-  
+
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Gabriella Souza</a>
@@ -24,7 +24,8 @@
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Procedimentos</a>
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">Procedimentos</a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="facial.html">Facial</a></li>
               <li><a class="dropdown-item" href="corporal.html">Corporal</a></li>
@@ -41,37 +42,64 @@
 
   <br>
 
- 
+
   <h2 style="text-align: center; color: #bb8a50;">FALE CONOSCO</h2>
 
-  
-  <div class="container mt-5 mb-5">
-    <div class="row justify-content-center">
-      <div class="col-md-8">
-        <form>
-          <div class="mb-3">
-            <label for="nome" class="form-label">Nome completo</label>
-            <input type="text" class="form-control" id="nome" required>
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">E-mail</label>
-            <input type="email" class="form-control" id="email" required>
-          </div>
-          <div class="mb-3">
-            <label for="telefone" class="form-label">Telefone</label>
-            <input type="tel" class="form-control" id="telefone">
-          </div>
-          <div class="mb-3">
-            <label for="mensagem" class="form-label">Mensagem</label>
-            <textarea class="form-control" id="mensagem" rows="5" required></textarea>
-          </div>
-          <button type="submit" class="btn" style="background-color: #bb8a50; color: white;">Enviar</button>
-        </form>
-      </div>
-    </div>
-  </div>
 
-  
+  <div class="container mt-5 mb-5">
+
+    <form>
+      <div class="mb-3">
+        <label for="nome" class="form-label">Nome completo</label>
+        <input type="text" class="form-control" id="nome" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">E-mail</label>
+        <input type="email" class="form-control" id="email" required>
+      </div>
+      <div class="mb-3">
+        <label for="telefone" class="form-label">Telefone</label>
+        <input type="tel" class="form-control" id="telefone">
+      </div>
+      <div class="mb-3">
+        <label for="mensagem" class="form-label">Mensagem</label>
+        <textarea class="form-control" id="mensagem" rows="5" required></textarea>
+      </div>
+    </form>
+    <form onsubmit="enviarFormulario(event)">
+      <button type="submit" class="btn" onclick="enviarFormulario()"
+        style="background-color: #bb8a50; color: white;">Enviar</button>
+    </form>
+
+
+  </div>
+  <script>
+    function enviarFormulario(event) {
+      event.preventDefault();
+
+      const nome = document.getElementById("nome").value;
+      const email = document.getElementById("email").value;
+      const telefone = document.getElementById("telefone").value;
+      const textoMensagem = document.getElementById("mensagem").value;
+      const data = document.getElementById("data") ? document.getElementById("data").value : "";
+
+      if (!nome || !email || !telefone || !textoMensagem) {
+        alert("Por favor, preencha todos os campos.");
+        return;
+      }
+
+      const numeroWhatsApp = "5519993344430";
+      const mensagemFinal = `Olá, meu nome é ${nome}. Gostaria de agendar o(os) seguintes procedimentos:\n\n${textoMensagem}\n\nData desejada: ${data}`;
+      const url = "https://wa.me/" + numeroWhatsApp + "?text=" + encodeURIComponent(mensagemFinal);
+
+      window.open(url, "_blank");
+    }
+  </script>
+
+
+
+
+
   <div vw class="enabled">
     <div vw-access-button class="active"></div>
     <div vw-plugin-wrapper>
@@ -79,7 +107,7 @@
     </div>
   </div>
 
- 
+
   <div class="container_wrap footer_color" id="footer">
     <section>
       <div class="footer-container">
@@ -117,8 +145,11 @@
 
           <h4 style="margin-top: 30px; color: white;">SIGA NOSSAS REDES!</h4>
           <div class="footer-social-icons">
-            <a href="https://www.instagram.com/gabriellasouza.oficial?igsh=bnpjcTl2dmN6eWtv&utm_source=qr"><img src="https://www.diazer.com.br/wp-content/uploads/2020/05/icone-instagram-white.png" alt="Instagram"></a>
-            <a href="https://www.tiktok.com/@gabriellasouzaoficial?_t=ZM-8yY0dSDHNkm&_r=1"><img src="https://www.diazer.com.br/wp-content/uploads/2025/02/icone-tiktok-white.png" alt="TikTok"></a>
+            <a href="https://www.instagram.com/gabriellasouza.oficial?igsh=bnpjcTl2dmN6eWtv&utm_source=qr"><img
+                src="https://www.diazer.com.br/wp-content/uploads/2020/05/icone-instagram-white.png"
+                alt="Instagram"></a>
+            <a href="https://www.tiktok.com/@gabriellasouzaoficial?_t=ZM-8yY0dSDHNkm&_r=1"><img
+                src="https://www.diazer.com.br/wp-content/uploads/2025/02/icone-tiktok-white.png" alt="TikTok"></a>
           </div>
         </div>
 
@@ -135,7 +166,7 @@
     &copy; GABRIELLA SOUZA. Todos os direitos reservados.
   </footer>
 
-  
+
   <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
   <script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');
