@@ -293,7 +293,6 @@
 }
 
 
-  /* Centraliza o conteúdo do formulário e do título */
   .container.mt-5.mb-5 {
     display: flex;
     flex-direction: column;
@@ -302,7 +301,7 @@
     text-align: center;
   }
 
-  /* Faz com que os inputs não fiquem gigantes na centralização */
+
   .container.mt-5.mb-5 form {
     max-width: 600px;
     width: 100%;
