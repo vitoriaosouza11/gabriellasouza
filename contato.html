@@ -12,7 +12,6 @@
 
 <body>
 
-
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Gabriella Souza</a>
@@ -42,13 +41,10 @@
 
   <br>
 
-
   <h2 style="text-align: center; color: #bb8a50;">FALE CONOSCO</h2>
 
-
   <div class="container mt-5 mb-5">
-
-    <form>
+    <form onsubmit="enviarFormulario(event)">
       <div class="mb-3">
         <label for="nome" class="form-label">Nome completo</label>
         <input type="text" class="form-control" id="nome" required>
@@ -59,46 +55,42 @@
       </div>
       <div class="mb-3">
         <label for="telefone" class="form-label">Telefone</label>
-        <input type="tel" class="form-control" id="telefone">
+        <input type="tel" class="form-control" id="telefone" required>
+      </div>
+      <div class="mb-3">
+        <label for="data" class="form-label">Data desejada</label>
+        <input type="date" class="form-control" id="data" required>
       </div>
       <div class="mb-3">
         <label for="mensagem" class="form-label">Mensagem</label>
         <textarea class="form-control" id="mensagem" rows="5" required></textarea>
       </div>
+      <button type="submit" class="btn" style="background-color: #bb8a50; color: white;">Enviar</button>
     </form>
-    <form onsubmit="enviarFormulario(event)">
-      <button type="submit" class="btn" onclick="enviarFormulario()"
-        style="background-color: #bb8a50; color: white;">Enviar</button>
-    </form>
-
-
   </div>
+
   <script>
     function enviarFormulario(event) {
       event.preventDefault();
 
-      const nome = document.getElementById("nome").value;
-      const email = document.getElementById("email").value;
-      const telefone = document.getElementById("telefone").value;
-      const textoMensagem = document.getElementById("mensagem").value;
-      const data = document.getElementById("data") ? document.getElementById("data").value : "";
+      const nome = document.getElementById("nome").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const telefone = document.getElementById("telefone").value.trim();
+      const textoMensagem = document.getElementById("mensagem").value.trim();
+      const data = document.getElementById("data").value;
 
-      if (!nome || !email || !telefone || !textoMensagem) {
+      if (!nome || !email || !telefone || !textoMensagem || !data) {
         alert("Por favor, preencha todos os campos.");
         return;
       }
 
       const numeroWhatsApp = "5519993344430";
-      const mensagemFinal = `Olá, meu nome é ${nome}. Gostaria de agendar o(os) seguintes procedimentos:\n\n${textoMensagem}\n\nData desejada: ${data}`;
+      const mensagemFinal = `Olá, meu nome é ${nome}.\n\nEmail: ${email}\nTelefone: ${telefone}\n\nGostaria de agendar o(s) seguinte(s) procedimento(s):\n${textoMensagem}\n\nData desejada: ${data}`;
       const url = "https://wa.me/" + numeroWhatsApp + "?text=" + encodeURIComponent(mensagemFinal);
 
       window.open(url, "_blank");
     }
   </script>
-
-
-
-
 
   <div vw class="enabled">
     <div vw-access-button class="active"></div>
@@ -107,11 +99,9 @@
     </div>
   </div>
 
-
   <div class="container_wrap footer_color" id="footer">
     <section>
       <div class="footer-container">
-
         <div class="footer-column">
           <h4 style="margin-top: 30px; color: white;">NAVEGUE PELO SITE</h4>
           <ul>
@@ -126,15 +116,15 @@
           <h4 style="margin-top: 30px; color: white;">ENDEREÇO</h4>
           <p style="color:#bb8a50;">
             Rua do Algodão, 1267 <br>
-            Conjuntos 601, 602 e 603 <br>
+            Cidade Nova <br>
             Santa Bárbara d'Oeste – SP
           </p>
 
           <h4 style="margin-top: 30px; color: white;">HORÁRIO DE FUNCIONAMENTO</h4>
           <p>
-            Segunda a sexta das 8h às 21h <br>
+            Terça a sexta das 8h às 21h <br>
             Sábados das 8h às 17h <br>
-            Domingos sem atendimento
+            Domingos e Segundas sem atendimento
           </p>
         </div>
 
@@ -157,7 +147,6 @@
           <img src="FOTOS/logo.jpg" style="width: 100px; height: 100px; border-radius: 50%;" alt="Logo">
           <p style="color: #bb8a50; margin-top: 10px;">ESTÉTICA AVANÇADA E INTEGRATIVA</p>
         </div>
-
       </div>
     </section>
   </div>
@@ -165,7 +154,6 @@
   <footer style="background-color: #333; color: white; text-align: center; padding: 20px;">
     &copy; GABRIELLA SOUZA. Todos os direitos reservados.
   </footer>
-
 
   <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
   <script>
